@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+.navbar{
+    display: flex;
+    background-color: rgb(220, 220, 220);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar_left{
+    display: flex;
+}
+.navbar_brand{
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+.navbar_items{
+    margin-top: 15px;
+}
+.navbar_item{
+    margin-top: 0;
+    margin-left: 20px;
+    display: inline;
+    list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar_link{
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.navbar_right{
+    margin-top: 12px;
+    margin-right: 20px;
+    margin-left: auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* thoughts stylling */
+
+.all_thoughts{
+    width: 800px;
+    margin: auto;
+    margin-top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.thoughts_list{
+    list-style-type: none;
 }
+
+.thought_item{
+    border: 1px solid black;
+    background-color: rgb(225, 225, 225);
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: 10px;
+}
+
+.thought_container{
+    
+}
+
+.thought_head{
+    display: flex;
+    gap: 20px;
+    /* height: 50px;
+    align-items: center; */
+    margin-bottom: 15px;
+}
+
+.thought_profile{
+    border-radius: 50%;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.thought_owner{
+    padding-top: 0;
+    margin-top: 10px;
+}
+
+.thought_created_time{
+    padding-top: 0;
+    margin-top: 12px;
+    font-size: small;
+    margin-left: auto;
+}
+
+.thought_body{
+    /* margin: 20px; */
+}
+
