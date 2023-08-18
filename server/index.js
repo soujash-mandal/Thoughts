@@ -61,7 +61,7 @@ app.post("/api/thoughts", async (req, res) => {
 
   const doc = await thought.save();
   // console.log(doc);
-  
+
   res.json(doc);
 });
 

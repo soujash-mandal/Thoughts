@@ -24,8 +24,9 @@ const HomePage = () => {
     });
 
     const data = await response.json();
+    // console.log(data);
+    data.reverse();
     setthoughts(data);
-    console.log(thoughts);
   };
 
   useEffect(() => {
@@ -65,6 +66,10 @@ const HomePage = () => {
   const handlePost = async (e) => {
     e.preventDefault();
     // console.log(thoughtObj);
+    console.log(thoughtObj.thought);
+    if (!thoughtObj.thought) {
+      return;
+    }
     const response = await fetch("/api/thoughts", {
       method: "POST",
       body: JSON.stringify(thoughtObj),
@@ -74,6 +79,7 @@ const HomePage = () => {
     });
 
     const data = await response.json();
+    setthoughtObj({});
     console.log(data);
   };
 
@@ -81,19 +87,24 @@ const HomePage = () => {
     <>
       <div className="home_page">
         <div className="create_thoughts">
-          <form onSubmit={handlePost}>
+          <form onSubmit={handlePost} className="create_thoughts_form">
             <textarea
               placeholder="Write Your Thoughts ... "
               cols={100}
-              rows={1}
+              rows={4}
               onChange={handleThoughtChange}
+              className="thought_textarea"
             ></textarea>
-            <input type="submit"></input>
+            <input
+              type="submit"
+              className="create_thought_btn"
+              value="POST"
+            ></input>
           </form>
         </div>
         <div className="all_thoughts">
           <ul className="thoughts_list">
-            <li className="thought_item">
+            {/* <li className="thought_item">
               <div className="thought_container">
                 <div class="thought_head">
                   <img
@@ -146,7 +157,7 @@ const HomePage = () => {
                   </p>
                 </div>
               </div>
-            </li>
+            </li> */}
 
             {thoughts.map((item) => (
               <li key={item._id} className="thought_item">
