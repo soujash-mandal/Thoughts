@@ -1,3 +1,10 @@
+/* common classes */
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
 .navbar{
     display: flex;
     background-color: rgb(220, 220, 220);
@@ -8,6 +15,10 @@
 
 .navbar_left{
     display: flex;
+}
+
+.navbar_logo{
+    height: 60px;
 }
 .navbar_brand{
     margin-top: 15px;
@@ -35,7 +46,7 @@
     margin-left: auto;
 }
 
-.home_page{
+.main{
     margin-top: 100px;
 }
 
@@ -53,8 +64,12 @@
 
 .thought_textarea{
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 20px;
     font-size: large;
+    outline: none;
+    /* border: none; */
+    background-color: rgb(240, 240, 240);;
+    border-radius: 20px;
 }
 
 .create_thought_btn{
@@ -127,3 +142,23 @@
     /* margin: 20px; */
 }
 
+
+/* profile */
+
+.profile_container{
+    background-color: rgb(240, 240, 240);
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding-top: 30px;
+    position: fixed;
+    margin: 30px;
+    margin-top: 0;
+}
+.profile_left{
+    width: 300px;
+}

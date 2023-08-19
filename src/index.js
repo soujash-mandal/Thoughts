@@ -49,8 +49,8 @@ const ClerkWithRoutes = () => {
           }
         >
           <Route path="/home" />
-          <Route path="/user" />
           <Route path="/trending" />
+          <Route path="/profile" />
         </Route>
       </Routes>
     </ClerkProvider>

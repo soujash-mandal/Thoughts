@@ -13,11 +13,6 @@ async function main() {
   console.log("db connected");
 }
 
-// const userSchema = new mongoose.Schema({
-//   username: String,
-//   password: String,
-// });
-
 const thoughtSchema = new mongoose.Schema({
   thought: String,
   name: String,
@@ -29,23 +24,18 @@ const thoughtSchema = new mongoose.Schema({
 
 const Thought = mongoose.model("Thought", thoughtSchema);
 
-// const User = mongoose.model("User", userSchema);
-
 const app = express();
 app.use(bodyParser.json());
 
-// API end points
-
-// CRUD -Create
-// app.post("/api/demo", async (req, res) => {
-//   let user = new User(req.body);
-//   const doc = await user.save();
-//   console.log(doc);
-//   res.json(doc);
-// });
-
 app.get("/api/thoughts", async (req, res) => {
   const docs = await Thought.find({});
+  res.json(docs);
+});
+
+
+app.post("/api/my-thoughts", async (req, res) => {
+  // console.log(req.body.userId);
+  const docs = await Thought.find({ userId: req.body.userId });
   res.json(docs);
 });
 

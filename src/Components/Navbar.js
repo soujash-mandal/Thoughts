@@ -6,20 +6,26 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar_left">
-        <h3 className="navbar_brand">Thoughts</h3>
+        {/* <img src="logo.png" alt="logo" className="navbar_logo"></img> */}
+        <h3 className="navbar_brand">THOUGHTS</h3>
+
         <ul className="navbar_items">
           <li className="navbar_item">
-            <Link to="/" className="navbar_link">Home</Link>
+            <Link to="/" className="navbar_link">
+              Home
+            </Link>
           </li>
-          <li className="navbar_item">
+          {/* <li className="navbar_item">
             <Link to="/trending" className="navbar_link">Trending</Link>
-          </li>
+          </li> */}
           <li className="navbar_item">
-            <Link to="/user" className="navbar_link">Groups</Link>
+            <Link to="/profile" className="navbar_link">
+              Profile
+            </Link>
           </li>
-          <li className="navbar_item">
+          {/* <li className="navbar_item">
             <Link to="/dms" className="navbar_link">Direct Messages</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="navbar_right">
